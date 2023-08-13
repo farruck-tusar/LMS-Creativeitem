@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tusar.creativeitem.ProfileActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:gravity="center">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/doctor4"
+            android:layout_margin="15dp"/>
+        <TextView
+            android:id="@+id/tvDrName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doc Name"
+            android:gravity="center"
+            android:textColor="@android:color/background_light"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_marginBottom="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:padding="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_weight="0.25"/>
+        <EditText
+            android:id="@+id/etDocName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:padding="5dp"
+            android:hint="Enter Name"
+            android:cursorVisible="false"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:background="@drawable/rounded_edittext_transparent"/>
+        <ImageButton
+            android:id="@+id/imgDocName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_mode_edit_grey"
+            android:layout_weight="0.10" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="#4d999999"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Mobile Num"
+            android:padding="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_weight="0.25"/>
+        <EditText
+            android:id="@+id/etDocMobile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:padding="5dp"
+            android:hint="Enter Phone Num"
+            android:cursorVisible="false"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:background="@drawable/rounded_edittext_transparent"/>
+        <ImageButton
+            android:id="@+id/imgDocPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_mode_edit_grey"
+            android:layout_weight="0.10" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="#4d999999"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:padding="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_weight="0.25"/>
+        <EditText
+            android:id="@+id/etDocEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:padding="5dp"
+            android:hint="Enter Email"
+            android:cursorVisible="false"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:background="@drawable/rounded_edittext_transparent"/>
+        <ImageButton
+            android:id="@+id/imgDocEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_mode_edit_grey"
+            android:layout_weight="0.10" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="#4d999999"/>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="#4d999999"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Degree"
+            android:padding="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_weight="0.25"/>
+        <EditText
+            android:id="@+id/etDocDegree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.65"
+            android:padding="5dp"
+            android:hint="Enter Degree"
+            android:cursorVisible="false"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:background="@drawable/rounded_edittext_transparent"/>
+        <ImageButton
+            android:id="@+id/imgDocDegree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_mode_edit_grey"
+            android:layout_weight="0.10" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="#4d999999"/>
+
+
+</LinearLayout>

@@ -1,0 +1,522 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context=".PrescriptionActivity">
+
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/TabWidgetTheme"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:showDividers="middle"
+                android:divider="#b7e4e6"/>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorNavBackground">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_margin="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/spinnerPatient"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/rounded_spinner"
+                                android:spinnerMode="dropdown"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_arrow_down_black"
+                                android:paddingRight="10dp"/>
+
+                        </RelativeLayout>
+
+                        <TableLayout
+                            android:id="@+id/tableLayoutSymptoms1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TableRow
+                                android:id="@+id/tableRowSymptom3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@android:color/background_light">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:text="Symptoms"
+                                    android:layout_weight=".85"
+                                    android:gravity="center_vertical"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#FFFFFF"
+                                    android:padding="10dp"
+                                    android:layout_marginRight="1dp"
+                                    android:background="@drawable/rounded_table"/>
+                                <ImageButton
+                                    android:id="@+id/btnSymptom1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.15"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_mode_edit"
+                                    android:background="@drawable/rounded_table1"/>
+                            </TableRow>
+                            <TableRow
+                                android:id="@+id/tableRowSymptom4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/background_light">
+                                <EditText
+                                    android:id="@+id/etSymptoms1"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter Symptoms"
+                                    android:inputType="textMultiLine"
+                                    android:textAppearance="@android:style/TextAppearance.Small"
+                                    android:textColor="#000"
+                                    android:padding="10dp"
+                                    android:background="@drawable/rounded_edittext"
+                                    android:gravity="center_vertical"/>
+                            </TableRow>
+                            <!-- <include layout="@layout/item_divider" /> -->
+                        </TableLayout>
+
+                        <TableLayout
+                            android:id="@+id/tableLayoutDiagnosis1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TableRow
+                                android:id="@+id/tableRowDiagnosis3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@android:color/background_light">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:text="Diagnosis"
+                                    android:layout_weight=".85"
+                                    android:gravity="center_vertical"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#FFFFFF"
+                                    android:padding="10dp"
+                                    android:layout_marginRight="1dp"
+                                    android:background="@drawable/rounded_table"/>
+                                <ImageButton
+                                    android:id="@+id/btnDiagnosis1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.15"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_mode_edit"
+                                    android:background="@drawable/rounded_table1"/>
+                            </TableRow>
+                            <TableRow
+                                android:id="@+id/tableRowDiagnosis4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/background_light">
+
+                                <EditText
+                                    android:id="@+id/etDiagnosis1"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter Diagnosis"
+                                    android:inputType="textMultiLine"
+                                    android:textAppearance="@android:style/TextAppearance.Small"
+                                    android:textColor="#000"
+                                    android:padding="10dp"
+                                    android:background="@drawable/rounded_edittext"
+                                    android:gravity="center_vertical"/>
+                            </TableRow>
+                            <!-- <include layout="@layout/item_divider" /> -->
+                        </TableLayout>
+
+                        <TableLayout
+                            android:id="@+id/tableLayoutMedicine1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@android:color/background_light">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:text="Medicine"
+                                    android:layout_weight=".85"
+                                    android:gravity="center_vertical"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#FFFFFF"
+                                    android:padding="10dp"
+                                    android:layout_marginRight="1dp"
+                                    android:background="@drawable/rounded_table"/>
+                                <ImageButton
+                                    android:id="@+id/btnMedicine1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.15"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_add_light"
+                                    android:background="@drawable/rounded_table1"/>
+                            </TableRow>
+                            <!-- <include layout="@layout/item_divider" /> -->
+                        </TableLayout>
+
+                        <TableLayout
+                            android:id="@+id/tableLayoutTest1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TableRow
+                                android:id="@+id/tableRowTest1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@android:color/background_light">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:text="Test"
+                                    android:layout_weight=".85"
+                                    android:gravity="center_vertical"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#FFFFFF"
+                                    android:padding="10dp"
+                                    android:layout_marginRight="1dp"
+                                    android:background="@drawable/rounded_table"/>
+                                <ImageButton
+                                    android:id="@+id/btnTest1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.15"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_add_light"
+                                    android:background="@drawable/rounded_table1"/>
+                            </TableRow>
+                            <!-- <include layout="@layout/item_divider" /> -->
+                        </TableLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorNavBackground">
+
+
+                        <LinearLayout
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_margin="20dp">
+
+                            <EditText
+                                android:id="@+id/etPatName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Patient Name"
+                                android:textColor="#000"
+                                android:textColorHint="#7c7c7c"
+                                android:padding="10dp"
+                                android:background="@drawable/rounded_edittext"/>
+
+                            <EditText
+                                android:id="@+id/etMobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Mobile Num"
+                                android:textColor="#000"
+                                android:textColorHint="#7c7c7c"
+                                android:layout_marginTop="10dp"
+                                android:padding="10dp"
+                                android:background="@drawable/rounded_edittext"/>
+
+                            <EditText
+                                android:id="@+id/etAge"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Age"
+                                android:textColor="#000"
+                                android:textColorHint="#7c7c7c"
+                                android:layout_marginTop="10dp"
+                                android:padding="10dp"
+                                android:background="@drawable/rounded_edittext"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <Spinner
+                                    android:id="@+id/spinner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/rounded_spinner"
+                                    android:spinnerMode="dropdown"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"/>
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_arrow_down_black"
+                                    android:paddingRight="10dp"/>
+
+                            </RelativeLayout>
+
+                            <TableLayout
+                                android:id="@+id/tableLayoutSymptoms"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp">
+
+                                <TableRow
+                                    android:id="@+id/tableRowSymptom1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:background="@android:color/background_light">
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:text="Symptoms"
+                                        android:layout_weight=".85"
+                                        android:gravity="center_vertical"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="#FFFFFF"
+                                        android:padding="10dp"
+                                        android:layout_marginRight="1dp"
+                                        android:background="@drawable/rounded_table"/>
+                                    <ImageButton
+                                        android:id="@+id/btnSymptom"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:src="@drawable/ic_mode_edit"
+                                        android:background="@drawable/rounded_table1"/>
+                                </TableRow>
+                                <TableRow
+                                    android:id="@+id/tableRowSymptom2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/background_light">
+                                    <EditText
+                                        android:id="@+id/etSymptoms"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Enter Symptoms"
+                                        android:inputType="textMultiLine"
+                                        android:textAppearance="@android:style/TextAppearance.Small"
+                                        android:textColor="#000"
+                                        android:padding="10dp"
+                                        android:background="@drawable/rounded_edittext"
+                                        android:gravity="center_vertical"/>
+                                </TableRow>
+                                <!-- <include layout="@layout/item_divider" /> -->
+                            </TableLayout>
+
+                            <TableLayout
+                                android:id="@+id/tableLayoutDiagnosis"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp">
+
+                                <TableRow
+                                    android:id="@+id/tableRowDiagnosis1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:background="@android:color/background_light">
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:text="Diagnosis"
+                                        android:layout_weight=".85"
+                                        android:gravity="center_vertical"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="#FFFFFF"
+                                        android:padding="10dp"
+                                        android:layout_marginRight="1dp"
+                                        android:background="@drawable/rounded_table"/>
+                                    <ImageButton
+                                        android:id="@+id/btnDiagnosis"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:src="@drawable/ic_mode_edit"
+                                        android:background="@drawable/rounded_table1"/>
+                                </TableRow>
+                                <TableRow
+                                    android:id="@+id/tableRowDiagnosis2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/background_light">
+
+                                    <EditText
+                                        android:id="@+id/etDiagnosis"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Enter Diagnosis"
+                                        android:inputType="textMultiLine"
+                                        android:textAppearance="@android:style/TextAppearance.Small"
+                                        android:textColor="#000"
+                                        android:padding="10dp"
+                                        android:background="@drawable/rounded_edittext"
+                                        android:gravity="center_vertical"/>
+                                </TableRow>
+                                <!-- <include layout="@layout/item_divider" /> -->
+                            </TableLayout>
+
+                            <TableLayout
+                                android:id="@+id/tableLayoutMedicine"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp">
+
+                                <TableRow
+                                    android:id="@+id/tableRow1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:background="@android:color/background_light">
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:text="Medicine"
+                                        android:layout_weight=".85"
+                                        android:gravity="center_vertical"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="#FFFFFF"
+                                        android:padding="10dp"
+                                        android:layout_marginRight="1dp"
+                                        android:background="@drawable/rounded_table"/>
+                                    <ImageButton
+                                        android:id="@+id/btnMedicine"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:src="@drawable/ic_add_light"
+                                        android:background="@drawable/rounded_table1"/>
+                                </TableRow>
+                                <!-- <include layout="@layout/item_divider" /> -->
+                            </TableLayout>
+
+                            <TableLayout
+                                android:id="@+id/tableLayoutTest"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp">
+
+                                <TableRow
+                                    android:id="@+id/tableRowTest"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:background="@android:color/background_light">
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:text="Test"
+                                        android:layout_weight=".85"
+                                        android:gravity="center_vertical"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="#FFFFFF"
+                                        android:padding="10dp"
+                                        android:layout_marginRight="1dp"
+                                        android:background="@drawable/rounded_table"/>
+                                    <ImageButton
+                                        android:id="@+id/btnTest"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="0.15"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:src="@drawable/ic_add_light"
+                                        android:background="@drawable/rounded_table1"/>
+                                </TableRow>
+                                <!-- <include layout="@layout/item_divider" /> -->
+                            </TableLayout>
+
+                        </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+            </FrameLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+    </TabHost>
+
+</LinearLayout>

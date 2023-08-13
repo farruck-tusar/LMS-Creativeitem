@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_appointment"
+            android:icon="@mipmap/appointment_icon"
+            android:title="Appointment" />
+        <item
+            android:id="@+id/nav_prescription"
+            android:icon="@mipmap/prescription_icon"
+            android:title="New Prescription" />
+        <item
+            android:id="@+id/nav_patient"
+            android:icon="@mipmap/patient_icon"
+            android:title="Patient directory" />
+        <item
+            android:id="@+id/nav_billing"
+            android:icon="@mipmap/billing_icon"
+            android:title="Billing" />
+        <item
+            android:id="@+id/nav_schedule"
+            android:icon="@mipmap/schedule_icon"
+            android:title="Schedule" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@mipmap/setting_icon"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_password"
+            android:icon="@drawable/ic_password"
+            android:title="Change Password" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@mipmap/logout_icon"
+            android:title="Logout" />
+    </group>
+</menu>

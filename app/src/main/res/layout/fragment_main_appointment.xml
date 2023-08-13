@@ -1,0 +1,23 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tusar.creativeitem.utility.FragmentMainAppointment">
+
+    <ListView
+        android:id="@+id/listAppointment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/tvAppointment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="No Appointment History Found"
+        android:textAppearance="@android:style/TextAppearance.Small"/>
+
+</FrameLayout>

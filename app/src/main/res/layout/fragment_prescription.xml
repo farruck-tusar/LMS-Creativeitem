@@ -1,0 +1,22 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tusar.creativeitem.utility.FragmentPrescription">
+
+    <ListView
+        android:id="@+id/listPrescription"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+    <TextView
+        android:id="@+id/tvPrescription"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="No Prescription List Found"
+        android:textAppearance="@android:style/TextAppearance.Small"/>
+
+</FrameLayout>

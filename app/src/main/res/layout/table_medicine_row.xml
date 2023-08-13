@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/linearLay"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@android:color/background_light">
+    <TextView
+        android:id="@+id/tvMedicineName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4"
+        android:textColor="#000"
+        android:text="Name"
+        android:padding="10dp"
+        android:gravity="center_vertical"/>
+    <TextView
+        android:id="@+id/tvMedicineDes"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.45"
+        android:textColor="#7c7c7c"
+        android:text="Description"
+        android:padding="10dp"
+        android:gravity="center_vertical"/>
+
+    <ImageButton
+        android:id="@+id/btndelete"
+        android:layout_weight="0.15"
+        android:layout_width="0dp"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_delete"
+        android:padding="10dp"
+        android:background="@android:color/transparent"/>
+</TableRow>
+
+<View xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:background="#9999" />
+</LinearLayout>
